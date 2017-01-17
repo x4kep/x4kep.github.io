@@ -1,0 +1,178 @@
+/*-------------------------------------------------------
+  Modules and standalone components
+---------------------------------------------------------*/
+
+
+/* Header styles
+---------------------------------------------------------*/
+/* Global header - includes global nav */
+.global-header {
+  position: fixed;
+  background-color: #222;
+  opacity: 1;
+  width: 100%;
+  z-index: 10000;
+}
+.global-nav {
+  position: relative;
+  padding: 20px;
+  font-size: 0;
+  float: right;
+}
+.global-nav::after {
+  clear:  both;
+}
+.global-nav a {
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: $font-size-base*0.7;
+  color: $black;
+  font-weight: bold;
+
+  &:hover {
+    color: $red;
+  }
+}
+.global-nav a.active {
+  color: orange;
+}
+
+/* Blog post content header */
+.post-header {
+  margin-bottom: 40px;
+}
+.post-header p {
+  margin: 0;
+}
+.post-author {
+  font-size: $font-size-s;
+  text-transform: uppercase;
+}
+.post-date,
+.post-source {
+  font-size: $font-size-xs;
+}
+.post-source span {
+  text-transform: uppercase;
+}
+
+
+
+/* Main content area
+---------------------------------------------------------
+main {
+  padding-bottom: 60px;
+}*/
+.feature-img {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+
+/* Buttons */
+article {
+  /* TODO: Could possibly move to base or add class
+  to make specific to this page only?*/
+  position: relative;
+}
+button,
+input[type="submit"]{
+  font-size: $font-size-base;
+  border: none;
+}
+.btn-group {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn {
+  background: $gray;
+  color: white;
+  padding: 15px 25px;
+  line-height: 1;
+  vertical-align: top;
+  text-transform: uppercase;
+  border: 1px solid $red;
+}
+.btn-primary {
+  background: $red;
+}
+.btn-primary:hover {
+  opacity: 0.7;
+  color: white;
+}
+.btn-default {
+  background: $black;
+  color: $red;
+}
+.btn-default {
+  color: #444;
+}
+.btn-default:hover{
+  color: $red;
+}
+
+/* Homepage teaser */
+.excerpt {
+  overflow: hidden;
+  background: #eee;
+  margin: 20px 0;
+
+  img {
+    float: left;
+    margin-right: 15px;
+    max-width: 100%;
+  }
+  h3 {
+    margin-top: 20px;
+  }
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid-item-2 {
+  width: 48%;
+  margin-right: 2%;
+  padding: 20px;
+}
+.grid-item-3 {
+  width: 31%;
+  margin-right: 1%;
+  padding: 20px;
+}
+.grid-item-4 {
+  width: 21%;
+  margin-right: 1%;
+  padding: 20px;
+}
+
+
+
+/* Global footer
+---------------------------------------------------------*/
+.global-footer {
+  background: $black;
+  color: white;
+  padding: 40px 0;
+  font-size: $font-size-s;
+  overflow: hidden;
+}
+.global-footer h2 {
+  font-size: $font-size-base;
+}
+
+
+/*----------------------------------------------MEDIA QUERY-----------------------------------------------------------*/
+@media (max-width: 1050px) {
+  .grid-item-2, .grid-item-3 {
+    width: 96%;
+    margin-right: 2%;
+    padding: 20px;
+    text-align: center;
+  }
+  .about {
+    min-height: 500px;
+    padding: 50px 0px;
+  }
+}
